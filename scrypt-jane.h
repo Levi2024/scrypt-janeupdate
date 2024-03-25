@@ -2,19 +2,19 @@
 #define SCRYPT_JANE_H
 
 /*
-	Nfactor: Increases CPU & Memory Hardness
-	N = (1 << (Nfactor + 1)): How many times to mix a chunk and how many temporary chunks are used
+    Nfactor: Increases CPU & Memory Hardness
+    N = (1 << (Nfactor + 1)): How many times to mix a chunk and how many temporary chunks are used
 
-	rfactor: Increases Memory Hardness
-	r = (1 << rfactor): How large a chunk is
+    rfactor: Increases Memory Hardness
+    r = (1 << rfactor): How large a chunk is
 
-	pfactor: Increases CPU Hardness
-	p = (1 << pfactor): Number of times to mix the main chunk
+    pfactor: Increases CPU Hardness
+    p = (1 << pfactor): Number of times to mix the main chunk
 
-	A block is the basic mixing unit (salsa/chacha block = 64 bytes)
-	A chunk is (2 * r) blocks
+    A block is the basic mixing unit (salsa/chacha block = 64 bytes)
+    A chunk is (2 * r) blocks
 
-	~Memory used = (N + 2) * ((2 * r) * block size)
+    ~Memory used = (N + 2) * ((2 * r) * block size)
 */
 
 #include <stdlib.h>
